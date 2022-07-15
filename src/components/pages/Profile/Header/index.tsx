@@ -35,7 +35,7 @@ export default function AccountHeader({
     <div className={styles.grid}>
       <div>
         <Account accountId={accountId} />
-        <Stats />
+        <Stats accountId={accountId} />
       </div>
 
       <div>
