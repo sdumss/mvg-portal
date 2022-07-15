@@ -20,6 +20,8 @@
   flex-direction: column;
   flex: 1;
   text-align: center;
+  /* TODO: check this line */
+  /* margin: 0; */
 }
 
 .title {

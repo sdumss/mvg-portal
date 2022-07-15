@@ -8,7 +8,15 @@ interface UseSiteMetadata {
   siteImage: { childImageSharp: { original: { src: string } } }
   menu: {
     name: string
-    link: string
+    link?: string
+    subItems?: {
+      name: string
+      link?: string
+      subItems?: {
+        name: string
+        link: string
+      }[]
+    }[]
   }[]
   warning: {
     main: string
@@ -33,6 +41,7 @@ interface UseSiteMetadata {
   appConfig: {
     metadataCacheUri: string
     vpRegistryUri: string
+    complianceUri: string
     infuraProjectId: string
     chainIds: number[]
     chainIdsSupported: number[]
@@ -61,6 +70,14 @@ const query = graphql`
         menu {
           name
           link
+          subItems {
+            name
+            link
+            subItems {
+              name
+              link
+            }
+          }
         }
         warning {
           main
@@ -85,6 +102,7 @@ const query = graphql`
         appConfig {
           metadataCacheUri
           vpRegistryUri
+          complianceUri
           infuraProjectId
           chainIds
           chainIdsSupported

@@ -51,7 +51,7 @@ export default function AccountPage({
     }
 
     signMessage()
-  }, [token, accountId, web3, vpRegistryUri])
+  }, [token, accountId, web3])
 
   return (
     <div className={styles.profile}>

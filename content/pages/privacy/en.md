@@ -246,3 +246,8 @@ You have the right to lodge a complaint with a supervisory authority if you cons
 # 8. Questions
 
 For any requests regarding our privacy policy, please send us an e-mail to [info@gaia-x.eu](mailto:info@gaia-x.eu).
+
+# 9. Changes to the Privacy Policy
+
+We adjust this policy from time to time, by publishing a new version on our portal demonstrator. You can find the date of the current version at the beginning of this policy.
+The latest version of this policy applies to the processing of your personal data.

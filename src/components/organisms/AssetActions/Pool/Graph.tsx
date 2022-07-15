@@ -66,10 +66,6 @@ function getOptions(locale: string): ChartOptions {
     },
     tooltips: {
       ...tooltipOptions,
-      backgroundColor: `#fff`,
-      titleFontColor: `#303030`,
-      bodyFontColor: `#141414`,
-      borderColor: `#e2e2e2`,
       callbacks: {
         label: (tooltipItem: ChartTooltipItem) =>
           `${formatPrice(`${tooltipItem.yLabel}`, locale)} OCEAN`

@@ -1,6 +1,5 @@
 import { GX_NETWORK_ID } from '../../chains.config'
 import { UserBalance } from '../@types/TokenBalance'
-import { Tokens } from '../components/pages/Home/Onboarding/Steps/ClaimTokens'
 
 interface IErrorParams {
   accountId: string

@@ -6,7 +6,7 @@ import styles from './Input.module.css'
 import InputGroup from '../../../atoms/Input/InputGroup'
 import isUrl from 'is-url-superb'
 
-const isSanitizedUrl = (url: string): boolean => {
+export const isSanitizedUrl = (url: string): boolean => {
   return url !== '' && isUrl(url) && !url.includes('javascript:')
 }
 
@@ -27,7 +27,7 @@ export default function URLInput({
   useEffect(() => {
     if (!field?.value || field?.value?.length === 0) return
 
-    const isValueValid = isSanitizedUrl(field.value) && !meta.error
+    const isValueValid = isSanitizedUrl(field.value)
 
     setButtonDisabled(!isValueValid)
   }, [field?.value, meta?.error])

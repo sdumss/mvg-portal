@@ -8,12 +8,6 @@
   justify-content: center;
   height: 100%;
   cursor: zoom-out;
-  z-index: 4;
-}
-
-.modal img {
-  max-height: 90%;
-  object-fit: contain;
 }
 
 #close {
@@ -23,7 +17,8 @@
   position: relative;
   border: none;
   padding: 0;
-  height: 10%;
+  width: 2em;
+  height: 2em;
   border-radius: 50%;
   background: transparent;
   color: var(--brand-grey);
@@ -34,14 +29,12 @@
 
 #close:before,
 #close:after {
-  --close-width: 0.125rem;
-
   position: absolute;
   top: 15%;
-  left: calc(50% - (var(--close-width) / 2));
-  width: var(--close-width);
+  left: calc(50% - 0.0625em);
+  width: 0.125em;
   height: 70%;
-  border-radius: var(--close-width);
+  border-radius: 0.125em;
   transform: rotate(45deg);
   background: currentcolor;
   content: '';
