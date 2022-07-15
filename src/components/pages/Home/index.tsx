@@ -257,35 +257,39 @@ export default function HomePage(): ReactElement {
           <HomeContent />
         </section>
 
-        <Container>
-          <div className={styles.section}>
-            <h3>Featured Portals</h3>
-            <div className={styles.portals}>
-              {portals?.map((portal, i) => (
-                <PortalTeaser {...portal} key={i} />
-              ))}
+        <section className={styles.section}>
+          <Container>
+            <div className={styles.section}>
+              <SectionTitle title="Featured Portals" />
+              <div className={styles.portals}>
+                {portals?.map((portal, i) => (
+                  <PortalTeaser {...portal} key={i} />
+                ))}
+              </div>
             </div>
-          </div>
-        </Container>
-        <Container>
-          <SectionTitle {...featuredAssets.childIndexJson} />
-          {queryLatest?.length > 0 &&
-            queryLatest.map((section) => (
-              <SectionQueryResult
-                key={section.title}
-                title={section.title}
-                query={section.query}
-              />
-            ))}
-          <Button
-            className={styles.allAssetsButton}
-            style="text"
-            to="/search?sort=created&sortOrder=desc"
-            arrow
-          >
-            All data sets and algorithms
-          </Button>
-        </Container>
+          </Container>
+        </section>
+        <section className={styles.section}>
+          <Container>
+            <SectionTitle {...featuredAssets.childIndexJson} />
+            {queryLatest?.length > 0 &&
+              queryLatest.map((section) => (
+                <SectionQueryResult
+                  key={section.title}
+                  title={section.title}
+                  query={section.query}
+                />
+              ))}
+            <Button
+              className={styles.allAssetsButton}
+              style="text"
+              to="/search?sort=created&sortOrder=desc"
+              arrow
+            >
+              All data sets and algorithms
+            </Button>
+          </Container>
+        </section>
       </>
     </Permission>
   )

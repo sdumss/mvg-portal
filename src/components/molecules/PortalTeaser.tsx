@@ -5,6 +5,7 @@ import LinkOpener from '../molecules/LinkOpener'
 import classNames from 'classnames/bind'
 import UdlLogo from '../../images/udl-logo.svg'
 import SafeFBDCLogo from '../../images/safe-FBDC-logo.svg'
+import EuProGigant from '../../images/euProGigant-logo.svg'
 import { ReactComponent as Caret } from '../../images/caret.svg'
 import Button from '../atoms/Button'
 
@@ -12,7 +13,8 @@ const cx = classNames.bind(styles)
 
 const logoList = {
   udl: UdlLogo,
-  safeFBDC: SafeFBDCLogo
+  safeFBDC: SafeFBDCLogo,
+  euProGigant: EuProGigant
 }
 export interface ThirdPartyPortal {
   title: string
